@@ -22,3 +22,12 @@ docker run -v ${PWD}:/data -w /data --rm pandoc_ja:0.1 pandoc sample.md \
  --variable=CJKmainfont:IPAexGothic \
  --output=sample.pdf
 ```
+
+↑ 動かなくなった
+
+```
+$ docker run --rm -v $(pwd):/data frozenbonito/pandoc-eisvogel-ja \
+    -V luatexjapresetoptions=ipaex \
+    -o sample.pdf \
+    README.md
+```
